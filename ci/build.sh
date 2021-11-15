@@ -4,7 +4,13 @@ cd "$(dirname "$0")/.."
 
 source ci/env.sh
 source ci/upload-ci-artifact.sh
-sudo apt install nvidia-cuda-toolkit -y
+sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
+sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
+sudo apt-get update
+sudo apt-get install cuda
+sudo reboot
+export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+nvcc --version
 CUDA_HOMES=(
   /usr/local/cuda-10.0
   /usr/local/cuda-10.1
