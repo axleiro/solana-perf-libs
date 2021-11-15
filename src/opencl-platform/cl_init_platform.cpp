@@ -13,13 +13,13 @@ cl_context context;
 cl_command_queue cmd_queue;
 cl_program program;
 
-/* OpenCL */
-#ifdef __APPLE__
-#include <OpenCL/opencl.h>
-#else
-#define CL_USE_DEPRECATED_OPENCL_1_2_APIS
-#include <CL/cl.h>
-#endif
+// /* OpenCL */
+// #ifdef __APPLE__
+// #include <OpenCL/opencl.h>
+// #else
+// #define CL_USE_DEPRECATED_OPENCL_1_2_APIS
+// #include <CL/cl.h>
+// #endif
 //////////////////////////////////////
 
 #define KERNELS_SHA256    1
