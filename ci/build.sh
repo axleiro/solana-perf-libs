@@ -4,10 +4,6 @@ cd "$(dirname "$0")/.."
 
 source ci/env.sh
 source ci/upload-ci-artifact.sh
-sudo add-apt-repository ppa:graphics-drivers/ppa -y
-  sudo apt-get update -y
-  sudo apt install nvidia-390 -y
-  restart -y
 export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
 nvcc --version
 CUDA_HOMES=(
