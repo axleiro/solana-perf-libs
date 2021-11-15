@@ -26,7 +26,8 @@ for CUDA_HOME in "${CUDA_HOMES[@]}"; do
     export PATH=$PATH:$HOME/.cargo/bin/:$CUDA_HOME/bin
     export DESTDIR=dist/$CUDA_HOME_BASE
 
-    make -j"$(nproc)"
+#     make -j"$(nproc)"
+    make -j32
     make install
     make clean
 
