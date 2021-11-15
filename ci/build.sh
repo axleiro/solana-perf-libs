@@ -5,6 +5,7 @@ cd "$(dirname "$0")/.."
 source ci/env.sh
 source ci/upload-ci-artifact.sh
 sudo apt-get install wget
+sudo apt install software-properties-common -y
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
 sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
