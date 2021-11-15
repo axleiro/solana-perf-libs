@@ -4,14 +4,18 @@ cd "$(dirname "$0")/.."
 
 source ci/env.sh
 source ci/upload-ci-artifact.sh
-sudo apt-get install wget
-sudo apt install software-properties-common -y
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
-sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+sudo add-apt-repository universe
 sudo apt-get update
-sudo apt-get -y install cuda
+sudo apt-get install freeglut3-dev
+sudo apt-get -y install cuda cuda-10-1 cuda-toolkit-10-1 cuda-samples-10-1 cuda-documentation-10-1
+# sudo apt-get install wget
+# sudo apt install software-properties-common -y
+# wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+# sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+# sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+# sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+# sudo apt-get update
+# sudo apt-get -y install cuda
 nvcc --version
 CUDA_HOMES=(
   /usr/local/cuda-10.0
