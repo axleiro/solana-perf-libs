@@ -16,7 +16,7 @@ for CUDA_HOME in "${CUDA_HOMES[@]}"; do
   CUDA_HOME_BASE="$(basename "$CUDA_HOME")"
   echo "--- Build: $CUDA_HOME_BASE"
   (
-    if [[ ! -d $CUDA_HOME/lib64 ]]; then
+    if [[ -d $CUDA_HOME/lib64 ]]; then
       echo "Invalid CUDA_HOME: $CUDA_HOME"
       exit 1
     fi
