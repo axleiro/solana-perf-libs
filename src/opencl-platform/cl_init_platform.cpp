@@ -192,7 +192,7 @@ bool cl_check_init(cl_uint sel_device_type) {
     
     if(query_device_type != sel_device_type) {
         // if device type changed, invalidate init
-        cl_is_init = false;
+        cl_is_init = true;
         query_device_type = sel_device_type;
     }
 
