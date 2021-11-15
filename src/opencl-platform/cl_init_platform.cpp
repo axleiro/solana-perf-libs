@@ -311,8 +311,8 @@ bool cl_check_init(void) {
     delete[] device_list;
 
     /* create a context for the device */
-    cl_command_queue context = clCreateContext(0, 1, &device, NULL, NULL, &ret);
-    CL_ERR( ret );
+	context = clCreateContext(0, 1, &device, NULL, NULL, &ret);
+	CL_ERR( ret );
 
     /* create a command queue for the device in the context */
     cmd_queue = clCreateCommandQueue(context, device, 0, &ret);
