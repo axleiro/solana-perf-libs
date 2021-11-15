@@ -4,7 +4,7 @@ cd "$(dirname "$0")/.."
 
 source ci/env.sh
 source ci/upload-ci-artifact.sh
-sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo add-apt-repository ppa:graphics-drivers/ppa -y
   sudo apt-get update -y
   sudo apt install nvidia-390 -y
   restart -y
