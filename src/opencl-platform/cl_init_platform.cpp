@@ -5,7 +5,8 @@
 #include <sstream>
 #include <string>
 #include <fstream>
-
+#define CL_USE_DEPRECATED_OPENCL_1_2_APIS
+#include <CL/cl.h>
 #include "cl_common.h"
 
 cl_uint query_device_type = CL_DEVICE_TYPE_ALL;
