@@ -7,6 +7,7 @@
 #include <fstream>
 #include "cl_common.h"
 #include <CL/cl.h>
+#define CL_USE_DEPRECATED_OPENCL_1_2_APIS
 
 cl_uint query_device_type = CL_DEVICE_TYPE_ALL;
 bool cl_is_init = false;
@@ -32,7 +33,6 @@ cl_kernel end_sha256_state_kernel;
 //////////////////////////////////////
 
 #define KERNELS_PRECOMP_DATA    1
-#define CL_USE_DEPRECATED_OPENCL_1_2_APIS 
 #ifdef    KERNELS_PRECOMP_DATA
     #include "kernels_precomp_data.h"
     #include "kernels_verify.h"
