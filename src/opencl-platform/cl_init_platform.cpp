@@ -311,7 +311,7 @@ bool cl_check_init(void) {
 
     /* create a command queue for the device in the context */
     cmd_queue = clCreateCommandQueue(context, device, 0, &ret);
-    CL_ERR( ret );
+//     CL_ERR( ret );
 
     const char* kernel_src_cstr = NULL;
     
