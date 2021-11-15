@@ -6,8 +6,7 @@
 #include <string>
 #include <fstream>
 #include "cl_common.h"
-// #include <CL/cl.h>
-// #define CL_USE_DEPRECATED_OPENCL_1_2_APIS
+#include <CL/cl.h>  #define CL_USE_DEPRECATED_OPENCL_1_2_APIS
 cl_uint query_device_type = CL_DEVICE_TYPE_ALL;
 bool cl_is_init = false;
 
