@@ -6,9 +6,6 @@
 #include <string>
 #include <fstream>
 #include "cl_common.h"
-#define CL_TARGET_OPENCL_VERSION 220
-#define CL_USE_DEPRECATED_OPENCL_1_2_APIS
-#include <CL/cl.h>
 cl_uint query_device_type = CL_DEVICE_TYPE_ALL;
 bool cl_is_init = false;
 
@@ -16,6 +13,13 @@ cl_context context;
 cl_command_queue cmd_queue;
 cl_program program;
 
+/* OpenCL */
+#ifdef __APPLE__
+#include <OpenCL/opencl.h>
+#else
+#define CL_USE_DEPRECATED_OPENCL_1_2_APIS
+#include <CL/cl.h>
+#endif
 //////////////////////////////////////
 
 #define KERNELS_SHA256    1
@@ -312,7 +316,7 @@ bool cl_check_init(void) {
 
     /* create a command queue for the device in the context */
     cmd_queue = clCreateCommandQueue(context, device, 0, &ret);
-//     CL_ERR( ret );
+    CL_ERR( ret );
 
     const char* kernel_src_cstr = NULL;
     
