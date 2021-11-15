@@ -4,7 +4,7 @@ cd "$(dirname "$0")/.."
 
 source ci/env.sh
 source ci/upload-ci-artifact.sh
-sudo add-apt-repository universe
+# sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get install freeglut3-dev
 sudo apt-get -y install cuda cuda-10-1 cuda-toolkit-10-1 cuda-samples-10-1 cuda-documentation-10-1
