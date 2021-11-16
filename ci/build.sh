@@ -6,10 +6,10 @@ source ci/env.sh
 source ci/upload-ci-artifact.sh
 # nvcc --version
 CUDA_HOMES=(
-  /usr/local/cuda-11.1
-  /usr/local/cuda-11.2
-  /usr/local/cuda-11.3
-  /usr/local/cuda-11.4
+#   /usr/local/cuda-11.1
+#   /usr/local/cuda-11.2
+#   /usr/local/cuda-11.3
+#   /usr/local/cuda-11.4
   /usr/local/cuda-11.5
 )
 
