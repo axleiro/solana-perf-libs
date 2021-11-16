@@ -4,7 +4,7 @@ cd "$(dirname "$0")/.."
 
 source ci/env.sh
 source ci/upload-ci-artifact.sh
-nvcc --version
+# nvcc --version
 CUDA_HOMES=(
   /usr/local/cuda-10.0
   /usr/local/cuda-10.1
