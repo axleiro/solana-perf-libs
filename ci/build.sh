@@ -4,11 +4,11 @@ cd "$(dirname "$0")/.."
 
 source ci/env.sh
 source ci/upload-ci-artifact.sh
-sudo apt clean
-sudo apt update
-sudo apt purge nvidia-* 
-sudo apt autoremove
-sudo apt install -y cuda
+# sudo apt clean
+# sudo apt update
+# sudo apt purge nvidia-* 
+# sudo apt autoremove
+# sudo apt install -y cuda
 # sudo add-apt-repository universe
 # sudo apt-get update -y
 # sudo apt-get install freeglut3-dev -y
