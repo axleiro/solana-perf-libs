@@ -9,7 +9,7 @@ CUDA_HOMES=(
 #   /usr/local/cuda-10.0
 #   /usr/local/cuda-10.1
 #   /usr/local/cuda-10.2
-  /usr/local/cuda-11.1
+  /usr/local/cuda-11.2
 )
 
 for CUDA_HOME in "${CUDA_HOMES[@]}"; do
