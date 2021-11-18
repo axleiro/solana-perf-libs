@@ -36,7 +36,7 @@ done
 echo --- Build SGX
 (
   set -x
-  sudo systemctl enable docker
+  sudo service docker restart
   ci/docker-run.sh solanalabs/sgxsdk src/sgx-ecc-ed25519/build.sh
   ci/docker-run.sh solanalabs/sgxsdk src/sgx/build.sh
 )
